@@ -62,20 +62,10 @@ public class enemy : MonoBehaviour
         atkTimer += Time.deltaTime;
         if (atkTimer > atkDuration && currentAtcPla != null)
         {
-            currentAtcPla.TakeDamage(atkValue);
+            currentAtcPla.PTakeDamage(atkValue);
             atkTimer = 0;
         }
     }
-
-
-    public void TakeDamage(int damage)
-    {
-
-    }
-
-
-
-
 
 
 
@@ -101,11 +91,19 @@ public class enemy : MonoBehaviour
     }
 
 
+    public void TakeDamage(int damage)
+    {
+        this.HP -= damage;
+        if (HP <= 0)
+        {
+            Dead();
+        }
+    }
 
 
     private void Dead()
-    { 
-    
+    {
+        Destroy(gameObject);
     }
 
 }
