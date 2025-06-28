@@ -26,14 +26,15 @@ public class enemy : MonoBehaviour
     public int HP = 100;
 
 
-    // Start is called before the first frame update
+
+    private player currentAtcPla;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         switch (enemyState)
@@ -58,8 +59,21 @@ public class enemy : MonoBehaviour
 
     void AttactUpdate()
     {
-        
+        atkTimer += Time.deltaTime;
+        if (atkTimer > atkDuration && currentAtcPla != null)
+        {
+            currentAtcPla.TakeDamage(atkValue);
+            atkTimer = 0;
+        }
     }
+
+
+    public void TakeDamage(int damage)
+    {
+
+    }
+
+
 
 
 
@@ -71,6 +85,8 @@ public class enemy : MonoBehaviour
         {
             //anim.SetBool("IsAttacking", true);    //     ¶¯»­
             enemyState = EnemyState.attack;
+            currentAtcPla = collision.GetComponent<player>();
+
         }
     }
 
@@ -80,7 +96,16 @@ public class enemy : MonoBehaviour
         {
             //anim.SetBool("IsAttacking", false);
             enemyState = EnemyState.Move;
+            currentAtcPla = null;
         }
+    }
+
+
+
+
+    private void Dead()
+    { 
+    
     }
 
 }

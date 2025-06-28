@@ -43,5 +43,12 @@ public class player : MonoBehaviour
         rb.MovePosition(rb.position + Vector2.left * moveSpeed * Time.deltaTime);
     }
 
-
+    public void TakeDamage(int damage)
+    {
+        this.HP -= damage;
+        if (HP <= 0)
+        {
+            //Die();
+        }
+    }
 }

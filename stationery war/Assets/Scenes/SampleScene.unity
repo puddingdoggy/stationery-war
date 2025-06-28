@@ -680,6 +680,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6217272529592579620, guid: f3b7f4295e41ce241af8a22f8f8ae424, type: 3}
+      propertyPath: atkDuration
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6271862989653481699, guid: f3b7f4295e41ce241af8a22f8f8ae424, type: 3}
       propertyPath: HP
       value: 160
@@ -882,6 +886,10 @@ PrefabInstance:
     - target: {fileID: 505634451372611823, guid: 5188cb57de2138a4b9127b2db015ea35, type: 3}
       propertyPath: atkValue
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 505634451372611823, guid: 5188cb57de2138a4b9127b2db015ea35, type: 3}
+      propertyPath: atkDuration
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2616050148769733360, guid: 5188cb57de2138a4b9127b2db015ea35, type: 3}
       propertyPath: m_LocalPosition.x
