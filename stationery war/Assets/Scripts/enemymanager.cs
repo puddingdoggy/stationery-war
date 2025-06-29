@@ -48,14 +48,14 @@ public class enemymanager : MonoBehaviour
     }
     private void SpawnARandomZombie()
     {
-        int index = Random.Range(0,10);
-        if (index <= 4)
+        int index = Random.Range(0,2);
+        if (index == 1)
         { 
-            GameObject.Instantiate(penPrefab, spawnPointList[0].position, Quaternion.identity); 
+            GameObject.Instantiate(penPrefab, spawnPointList[index].position, Quaternion.identity); 
         }
-        else if (index >= 5) 
+        else if (index == 0) 
         {
-            GameObject.Instantiate(rubPrefab, spawnPointList[0].position, Quaternion.identity);
+            GameObject.Instantiate(rubPrefab, spawnPointList[index].position, Quaternion.identity);
         }
     }
 
