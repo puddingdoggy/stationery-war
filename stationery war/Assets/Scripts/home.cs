@@ -14,7 +14,7 @@ public class home : MonoBehaviour
     {
         if (!player)
         {
-            SceneManager.LoadScene("VictoryScene");
+            SceneManager.LoadScene("victory");
         }
 
     }

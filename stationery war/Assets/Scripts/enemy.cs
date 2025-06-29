@@ -75,7 +75,7 @@ public class enemy : MonoBehaviour
     {
         if (collision.tag == "Player" || collision.tag == "Playerhouse")
         {
-            //anim.SetBool("IsAttacking", true);    //     ¶¯»­
+            anim.SetBool("IsAttacking", true);    //     ¶¯»­
             enemyState = EnemyState.attack;
             currentAtcPla = collision.GetComponent<player>();
 
@@ -87,7 +87,7 @@ public class enemy : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            //anim.SetBool("IsAttacking", false);
+            anim.SetBool("IsAttacking", false);
             currentAtcPla = null;
             enemyState = EnemyState.Move;
         }

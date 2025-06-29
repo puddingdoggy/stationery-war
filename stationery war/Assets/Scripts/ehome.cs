@@ -14,7 +14,7 @@ public class ehome : MonoBehaviour
     {
         if (!enemy)
         {
-            SceneManager.LoadScene("GameOverScene");
+            SceneManager.LoadScene("loose");
         }
     }
 }

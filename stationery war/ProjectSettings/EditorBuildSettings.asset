@@ -6,12 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Assets/Scenes/StartMeanu.unity
+    guid: 84105cd2dc49b4642bcbf3d4138f5f6c
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/VictoryScene.unity
-    guid: 9cd7f1535ec6f8d4abb75dea5ac9ee62
+    path: Assets/Assets/Scenes/loose.unity
+    guid: 39249a854b7e13f46a6889bdc919b4fc
   - enabled: 1
-    path: Assets/Scenes/GameOverScene.unity
-    guid: f2fb72607ed12d346b95e81b0d668f23
+    path: Assets/Assets/Scenes/victory.unity
+    guid: ca8e85d0b67faa049a4ca34786d4de3a
   m_configObjects: {}

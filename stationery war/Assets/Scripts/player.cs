@@ -77,7 +77,7 @@ public class player : MonoBehaviour
     {
         if (collision.tag == "enemy" || collision.tag == "enemyhouse")
         {
-            //anim.SetBool("PIsAttacking", true);    //     ¶¯»­
+            anim.SetBool("PIsAttacking", true);    //     ¶¯»­
             playerState = PlayerState.attack;
             currentAtcEmy = collision.GetComponent<enemy>();
 
@@ -90,7 +90,7 @@ public class player : MonoBehaviour
         if (collision.tag == "enemy")
         {
             currentAtcEmy = null;
-            //anim.SetBool("PIsAttacking", false);
+            anim.SetBool("PIsAttacking", false);    //
             playerState = PlayerState.Move;
         }
     }
