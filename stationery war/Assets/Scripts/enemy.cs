@@ -32,6 +32,7 @@ public class enemy : MonoBehaviour
 
     void Start()
     {
+        transform.rotation = Quaternion.AngleAxis(180, Vector3.up);
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         numplayer = 0;

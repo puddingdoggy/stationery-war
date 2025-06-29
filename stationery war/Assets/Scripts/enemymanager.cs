@@ -20,7 +20,11 @@ public class enemymanager : MonoBehaviour
 
     private List<enemy> zombieList = new List<enemy>();
 
-    void Start()
+    private void Awake()
+    {
+        Instance = this;    
+    }
+    private void Start()
     {
         StartSpawn();
     }
@@ -29,13 +33,12 @@ public class enemymanager : MonoBehaviour
     public void StartSpawn()
     {
         spawnState = SpawnState.Spawning;
-        SpawnZombie();
+        StartCoroutine(SpawnZombie());
     }
     IEnumerator SpawnZombie()
     {
 
         yield return new WaitForSeconds(3);
-        //µÚÒ»²¨ 5
         for (int i = 0; i < 30; i++)
         {
             SpawnARandomZombie();
