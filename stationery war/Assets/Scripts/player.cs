@@ -23,6 +23,7 @@ public class player : MonoBehaviour
     public float PmoveSpeed = 0;
     public float PatkDuration = 0;
     private float atkTimer = 0;
+    private float numenemy = 0;
 
     public int PHP = 100;
 
@@ -33,6 +34,7 @@ public class player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        numenemy = 0;
     }
 
 
@@ -52,6 +54,7 @@ public class player : MonoBehaviour
             default:
                 break;
         }
+
     }
 
     void MoveUpdate()
@@ -67,6 +70,7 @@ public class player : MonoBehaviour
             currentAtcEmy.TakeDamage(PatkValue);
             atkTimer = 0;
         }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -80,15 +84,17 @@ public class player : MonoBehaviour
         }
     }
 
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "enemy")
         {
+            currentAtcEmy = null;
             //anim.SetBool("PIsAttacking", false);
             playerState = PlayerState.Move;
-            currentAtcEmy = null;
         }
     }
+
 
     public void PTakeDamage(int pdamage)
     {

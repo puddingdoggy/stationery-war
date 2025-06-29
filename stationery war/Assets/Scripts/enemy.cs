@@ -25,6 +25,7 @@ public class enemy : MonoBehaviour
 
     public int HP = 100;
 
+    private float numplayer = 0;
 
 
     private player currentAtcPla;
@@ -33,6 +34,7 @@ public class enemy : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        numplayer = 0;
     }
 
     void Update()
@@ -79,14 +81,15 @@ public class enemy : MonoBehaviour
 
         }
     }
+    
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
             //anim.SetBool("IsAttacking", false);
-            enemyState = EnemyState.Move;
             currentAtcPla = null;
+            enemyState = EnemyState.Move;
         }
     }
 
@@ -98,6 +101,7 @@ public class enemy : MonoBehaviour
         {
             Dead();
         }
+
     }
 
 

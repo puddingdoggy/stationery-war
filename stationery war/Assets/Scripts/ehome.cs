@@ -6,17 +6,16 @@ using UnityEngine.SceneManagement;
 
 
 
-public class home : MonoBehaviour
+public class ehome : MonoBehaviour
 {
-    public GameObject player;
+    public GameObject enemy;
 
     void Update()
     {
-        if (!player)
+        if (!enemy)
         {
-            SceneManager.LoadScene("VictoryScene");
+            SceneManager.LoadScene("GameOverScene");
         }
-
     }
-
 }
+
